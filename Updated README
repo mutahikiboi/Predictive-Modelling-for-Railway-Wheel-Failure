@@ -76,7 +76,7 @@ XGBoost
 
 Logistic Regression (Elastic Net)
 
-Support Vector Machine (RBF kernel)
+Support Vector Machine
 
 ## Key Design Choices
 
@@ -93,8 +93,6 @@ Optional PCA evaluated but ultimately discarded due to performance degradation
 Random Forest (most stable generalization)
 
 XGBoost (competitive after hyperparameter optimization)
-
-Hyperparameter Optimization
 
 XGBoost was further optimized using:
 
@@ -119,3 +117,4 @@ Binary failure prediction is more reliable than fine-grained multi-class predict
 # License
 
 This project is released under the MIT License
+
