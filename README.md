@@ -62,9 +62,9 @@ Genetic algorithm search
 
 Wrapper-based approaches consistently outperformed filters, resulting in a final subset of 14 features that balanced predictive power and interpretability.
 
-Modeling Approach
+## Modeling Approach
 
-All models were implemented using the mlr3 ecosystem in R, with unified preprocessing pipelines:
+All models were implemented with unified pre-processing pipelines:
 
 Models Benchmarked
 
@@ -78,7 +78,7 @@ Logistic Regression (Elastic Net)
 
 Support Vector Machine (RBF kernel)
 
-Key Design Choices
+## Key Design Choices
 
 5-fold cross-validation
 
@@ -100,21 +100,9 @@ XGBoost was further optimized using:
 
 Random search
 
-Bayesian optimization (mlr3mbo)
+Bayesian optimization
 
-Optimized parameters included:
-
-Number of boosting rounds
-
-Learning rate
-
-Tree depth
-
-Sampling ratios
-
-Class imbalance weighting
-
-Interpretability
+## Interpretability
 
 To ensure transparency and trustworthiness, multiple interpretability techniques were applied:
 
@@ -124,26 +112,10 @@ Local explanations (LIME-style)
 
 SHAP values (game-theoretic feature attribution)
 
-Key drivers of failure risk included:
-
-Total travel miles
-
-Average speed
-
-Flange thickness
-
-Dynamic vertical loading
-
-Applied age (temporal exposure)
-
-No evidence of label leakage was detected during interpretability analysis.
-
-Wheel failures are rare and highly imbalanced (<2%)
-
-Tree-based ensemble methods outperform linear models
-
 Feature engineering and wrapper-based selection significantly improve log-loss
 
 Binary failure prediction is more reliable than fine-grained multi-class prediction
+
+# License
 
 This project is released under the MIT License
