@@ -76,7 +76,7 @@ XGBoost
 
 Logistic Regression (Elastic Net)
 
-Support Vector Machine (RBF kernel)
+Support Vector Machine
 
 Key Design Choices
 
@@ -94,29 +94,11 @@ Random Forest (most stable generalization)
 
 XGBoost (competitive after hyperparameter optimization)
 
-Hyperparameter Optimization
-
 XGBoost was further optimized using:
 
 Random search
 
-Bayesian optimization (mlr3mbo)
-
-Optimized parameters included:
-
-Number of boosting rounds
-
-Learning rate
-
-Tree depth
-
-Sampling ratios
-
-Class imbalance weighting
-
-Interpretability
-
-To ensure transparency and trustworthiness, multiple interpretability techniques were applied:
+Bayesian optimization 
 
 Global Feature Importance (cross-entropy based)
 
@@ -124,26 +106,10 @@ Local explanations (LIME-style)
 
 SHAP values (game-theoretic feature attribution)
 
-Key drivers of failure risk included:
-
-Total travel miles
-
-Average speed
-
-Flange thickness
-
-Dynamic vertical loading
-
-Applied age (temporal exposure)
-
-No evidence of label leakage was detected during interpretability analysis.
-
-Wheel failures are rare and highly imbalanced (<2%)
-
-Tree-based ensemble methods outperform linear models
-
 Feature engineering and wrapper-based selection significantly improve log-loss
 
 Binary failure prediction is more reliable than fine-grained multi-class prediction
+
+# Licence
 
 This project is released under the MIT License
